@@ -8,7 +8,7 @@ export default function Contact() {
         <span className="mono">06</span> Contact
       </h2>
       <p className="section-lead">
-        Looking for a developer who also thinks like a designer? Write to me. I reply quickly.
+        Hiring for a developer role? Write to me. I reply quickly.
       </p>
       <a className="big-mail" href={`mailto:${person.email}`}>{person.email}</a>
       <p className="mono small">

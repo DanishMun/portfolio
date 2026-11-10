@@ -4,12 +4,13 @@ import { services } from "../lib/content";
 // like the parts list on a design sheet.
 export default function Services() {
   return (
-    <section className="section" id="services">
+    <section className="section section-small" id="services">
       <h2 className="section-title">
-        <span className="mono">05</span> Services
+        <span className="mono">05</span> What I can build
       </h2>
       <p className="section-lead">
-        I'm open to developer roles. I also build for businesses in Espoo, Helsinki and across Finland.
+        The kinds of work I can do from day one, in a team or for a business in Espoo,
+        Helsinki or anywhere in Finland.
       </p>
 
       <ol className="services">

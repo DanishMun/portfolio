@@ -10,9 +10,9 @@ const display = Gloock({ subsets: ["latin"], weight: "400", variable: "--font-di
 const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-sans" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
-const title = "Danish Munawar · Web Developer & Designer in Espoo, Finland";
+const title = "Danish Munawar · Full Stack Developer & Designer in Espoo, Finland";
 const description =
-  "Web developer and designer in Espoo, Finland. I build websites, Shopify stores, WordPress sites and small web apps with Next.js and React, and design logos and brand identities.";
+  "Full stack developer and designer in Espoo, Finland, looking for a permanent role. I build web apps with React, Next.js and TypeScript, plus websites, Shopify stores, WordPress sites and brand design.";
 
 // Everything Google and social sites (LinkedIn, WhatsApp, Slack) read about the page.
 export const metadata = {

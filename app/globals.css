@@ -146,7 +146,7 @@ img { max-width: 100%; display: block; }
   display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--mono); font-size: 14px;
 }
 .contact-row a { text-decoration-color: var(--magenta); text-underline-offset: 4px; }
-.status { grid-column: 2; margin: 0; font-family: var(--mono); font-size: 13px; color: var(--grey); }
+.status { grid-column: 2; margin: 0; font-family: var(--mono); font-size: 14px; color: var(--ink); }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--magenta); margin-right: 6px; }
 @media (max-width: 720px) {
   .hero-text { grid-template-columns: 1fr; }
@@ -308,7 +308,14 @@ img { max-width: 100%; display: block; }
   align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--rule);
 }
 .services .mono { color: var(--magenta); }
-.services h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
+.services h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(22px, 2.2vw, 26px); line-height: 1.15; }
+.services li { padding: 14px 0; }
+.services p { font-size: 15px; }
+
+/* a quieter section: smaller title, less space */
+.section-small { padding-top: 48px; padding-bottom: 48px; }
+.section-small .section-title { font-size: clamp(32px, 4.5vw, 52px); }
+.section-small .section-lead { margin-bottom: 28px; }
 .services p { margin: 0; color: var(--grey); font-size: 16px; }
 @media (max-width: 720px) {
   .services li { grid-template-columns: 28px 1fr; }

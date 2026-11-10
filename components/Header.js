@@ -22,7 +22,6 @@ export default function Header() {
         <a href="#work">Work</a>
         <a href="#design" className="hide-sm">Design</a>
         <a href="#about">About</a>
-        <a href="#services" className="hide-sm">Services</a>
         <a href="#contact">Contact</a>
         <a href={person.resume} className="resume">Résumé (PDF)</a>
       </nav>
