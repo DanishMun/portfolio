@@ -20,7 +20,7 @@ export default function Header() {
       </a>
       <nav>
         <a href="#work">Work</a>
-        <a href="#logos">Logos</a>
+        <a href="#design">Design</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href={person.resume} className="resume">Résumé (PDF)</a>

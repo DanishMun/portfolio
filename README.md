@@ -1,6 +1,6 @@
 # Portfolio: Danish Munawar
 
-My personal site. One page in five numbered "sheets": Identity, Work, Logos, About, Contact.
+My personal site. One page in five numbered "sheets": Identity, Work, Design, About, Contact.
 
 ## The idea
 
@@ -18,14 +18,14 @@ in Adobe Illustrator.
 | `app/globals.css` | All the styles, with comments. Colours and fonts are at the top. |
 | `components/Hero.js` | My name on the guide lines + construction circles |
 | `components/ProjectSheet.js` | One project as a "spec sheet" |
-| `components/Work.js`, `Logos.js`, `About.js`, `Contact.js` | One file per section |
+| `components/Work.js`, `Design.js`, `About.js`, `Contact.js` | One file per section |
 | `public/work/` | Project screenshots |
 | `public/logos/` | Logo images (listed in `lib/content.js`) |
 
-## Add a logo
+## Add design work
 
 1. Put the image in `public/logos/`, e.g. `bakery.png`.
-2. In `lib/content.js`, add `{ file: "bakery.png", caption: "Bakery, Helsinki" }` to `logos`.
+2. In `lib/content.js`, add `{ file: "bakery.png", caption: "Logo · Bakery" }` to `logos`.
 
 ## Fonts
 

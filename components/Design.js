@@ -1,16 +1,23 @@
-import { logos, designStats, featuredBrand } from "../lib/content";
+import { logos, designStats, designTypes, featuredBrand } from "../lib/content";
 
-// My logo work, shown on a grid like a type specimen sheet.
-export default function Logos() {
+// My design work: what I design, a featured brand, and a grid like a specimen sheet.
+export default function Design() {
   return (
-    <section className="section" id="logos">
+    <section className="section" id="design">
       <h2 className="section-title">
-        <span className="mono">03</span> Logos
+        <span className="mono">03</span> Design
       </h2>
       <p className="section-lead">
-        Before I wrote code, I drew marks for small businesses around the world.
-        That is where I learned to care about every pixel, and about the client.
+        Before I wrote code, I designed for small businesses around the world:
+        from the first logo sketch to the website and the box it ships in. That is where I learned
+        to care about every pixel, and about the client.
       </p>
+
+      <ul className="design-types">
+        {designTypes.map((type) => (
+          <li key={type}>{type}</li>
+        ))}
+      </ul>
 
       <ul className="stats">
         {designStats.map((s) => (
@@ -27,7 +34,7 @@ export default function Logos() {
         <ul className="logo-grid">
           {logos.map((logo) => (
             <li key={logo.file}>
-              <img src={`/logos/${logo.file}`} alt={`Logo for ${logo.caption}`} loading="lazy" />
+              <img src={`/logos/${logo.file}`} alt={logo.caption} loading="lazy" />
               <span className="mono">{logo.caption}</span>
             </li>
           ))}

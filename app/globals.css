@@ -65,7 +65,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .brand span { display: none; }
   .topbar nav { gap: 14px; }
-  .topbar nav a:not(.resume):nth-child(2) { display: none; } /* hide "Logos" on small phones */
+  .topbar nav a:not(.resume):nth-child(2) { display: none; } /* hide "Design" on small phones */
 }
 
 /* ------------------------------------------------------------
@@ -212,7 +212,7 @@ img { max-width: 100%; display: block; }
 .wip p { margin: 0; color: var(--grey); }
 
 /* ------------------------------------------------------------
-   Logos
+   Design
    ------------------------------------------------------------ */
 .stats { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-wrap: wrap; gap: 0; }
 .stats li { padding: 0 32px 0 0; margin-right: 32px; border-right: 1px solid var(--rule); }
@@ -224,6 +224,16 @@ img { max-width: 100%; display: block; }
   .stats li { padding: 0 8px 0 0; margin-right: 8px; }
   .stats strong { font-size: 38px; }
   .stats .mono { font-size: 11px; }
+}
+
+/* the list of design types, set like labels on a sheet */
+.design-types {
+  list-style: none; padding: 0; margin: 0 0 40px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.design-types li {
+  font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em;
+  border: 1px solid var(--cyan); color: var(--ink); padding: 6px 12px; background: rgba(255,255,255,0.6);
 }
 
 /* the featured brand project */

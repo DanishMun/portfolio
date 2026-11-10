@@ -12,7 +12,7 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variabl
 export const metadata = {
   title: "Danish Munawar · Full stack developer",
   description:
-    "Logo designer turned full stack developer. Small, working web apps built in Next.js and React. Espoo, Finland.",
+    "Designer turned full stack developer. Small, working web apps built in Next.js and React. Espoo, Finland.",
 };
 
 export default function RootLayout({ children }) {
