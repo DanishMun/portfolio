@@ -1,4 +1,5 @@
 import { Gloock, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { siteUrl } from "../lib/content";
 import "./globals.css";
 
 // Three fonts, three jobs:
@@ -9,10 +10,26 @@ const display = Gloock({ subsets: ["latin"], weight: "400", variable: "--font-di
 const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-sans" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
+const title = "Danish Munawar · Web Developer & Designer in Espoo, Finland";
+const description =
+  "Web developer and designer in Espoo, Finland. I build websites, Shopify stores, WordPress sites and small web apps with Next.js and React, and design logos and brand identities.";
+
+// Everything Google and social sites (LinkedIn, WhatsApp, Slack) read about the page.
 export const metadata = {
-  title: "Danish Munawar · Full stack developer",
-  description:
-    "Designer turned full stack developer. Small, working web apps built in Next.js and React. Espoo, Finland.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "/" }, // tells Google which address is the "real" one
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Danish Munawar",
+    title,
+    description,
+    locale: "en_US",
+  },
+  twitter: { card: "summary_large_image", title, description },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }) {

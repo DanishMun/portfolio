@@ -65,7 +65,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .brand span { display: none; }
   .topbar nav { gap: 14px; }
-  .topbar nav a:not(.resume):nth-child(2) { display: none; } /* hide "Design" on small phones */
+  .topbar nav .hide-sm { display: none; } /* fewer links on small phones */
 }
 
 /* ------------------------------------------------------------
@@ -158,6 +158,8 @@ img { max-width: 100%; display: block; }
    Sections
    ------------------------------------------------------------ */
 .section { max-width: var(--max); margin: 0 auto; padding: 72px var(--gutter); }
+/* when a menu link jumps to a section, leave room for the sticky top bar */
+.section, .hero { scroll-margin-top: 64px; }
 .section-title {
   display: flex; align-items: baseline; gap: 16px;
   margin: 0 0 12px; padding-top: 12px; border-top: 1px solid var(--ink);
@@ -296,6 +298,22 @@ img { max-width: 100%; display: block; }
 }
 .ruler .year { display: block; font-family: var(--display); font-size: 32px; line-height: 1; }
 .ruler .step { display: block; color: var(--grey); font-size: 15px; margin-top: 6px; max-width: 42ch; }
+
+/* ------------------------------------------------------------
+   Services: a lettered parts list
+   ------------------------------------------------------------ */
+.services { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+.services li {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px;
+  align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--rule);
+}
+.services .mono { color: var(--magenta); }
+.services h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
+.services p { margin: 0; color: var(--grey); font-size: 16px; }
+@media (max-width: 720px) {
+  .services li { grid-template-columns: 28px 1fr; }
+  .services p { grid-column: 2; }
+}
 
 /* ------------------------------------------------------------
    Contact
