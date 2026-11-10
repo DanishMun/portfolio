@@ -1,4 +1,4 @@
-import { logos, designStats } from "../lib/content";
+import { logos, designStats, featuredBrand } from "../lib/content";
 
 // My logo work, shown on a grid like a type specimen sheet.
 export default function Logos() {
@@ -21,6 +21,8 @@ export default function Logos() {
         ))}
       </ul>
 
+      <FeaturedBrand brand={featuredBrand} />
+
       {logos.length > 0 && (
         <ul className="logo-grid">
           {logos.map((logo) => (
@@ -32,5 +34,28 @@ export default function Logos() {
         </ul>
       )}
     </section>
+  );
+}
+
+// One brand project, shown bigger, with a link to the full case on Behance.
+// If there are no images yet, it still shows the name and the link.
+function FeaturedBrand({ brand }) {
+  return (
+    <article className="brand-case">
+      <div className="brand-head">
+        <span className="mono">Featured · {brand.kind}</span>
+        <h3>{brand.title}</h3>
+        <p>{brand.text}</p>
+        <a href={brand.link} className="brand-link">See the full project on Behance ↗</a>
+      </div>
+
+      {brand.images.length > 0 && (
+        <div className="brand-images">
+          {brand.images.map((file) => (
+            <img key={file} src={`/logos/${file}`} alt={`${brand.title}: ${brand.kind}`} loading="lazy" />
+          ))}
+        </div>
+      )}
+    </article>
   );
 }

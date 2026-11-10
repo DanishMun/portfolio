@@ -4,7 +4,7 @@ My personal site. One page in five numbered "sheets": Identity, Work, Logos, Abo
 
 ## The idea
 
-I designed logos for ten years before I became a developer. So the site looks like a
+I designed logos before I became a developer. So the site looks like a
 logo **construction sheet**: cyan guide lines (cap height and baseline) under my name,
 construction circles, crop marks around screenshots, a printer's registration mark.
 The two colours are **process cyan and magenta**: the colours of guides and selections

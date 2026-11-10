@@ -2,7 +2,7 @@
    Design tokens
    The colours come from print: CMYK cyan and magenta are the
    colours of guide lines and selections in Adobe Illustrator,
-   where I drew logos for ten years.
+   where I drew logos.
    ------------------------------------------------------------ */
 :root {
   --paper: #f4f4f1;    /* cool off-white, like drawing paper */
@@ -225,6 +225,28 @@ img { max-width: 100%; display: block; }
   .stats strong { font-size: 38px; }
   .stats .mono { font-size: 11px; }
 }
+
+/* the featured brand project */
+.brand-case {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 40px;
+  border-top: 1px solid var(--rule); padding: 28px 0 48px;
+}
+.brand-case:not(:has(.brand-images)) { grid-template-columns: 1fr; }
+@media (max-width: 860px) { .brand-case { grid-template-columns: 1fr; gap: 24px; } }
+.brand-head .mono { color: var(--magenta); text-transform: uppercase; }
+.brand-head h3 {
+  font-family: var(--display); font-weight: 400; font-size: clamp(56px, 9vw, 120px);
+  line-height: 1; margin: 8px 0 16px; letter-spacing: -0.02em;
+}
+.brand-head p { max-width: 44ch; margin: 0 0 24px; font-size: 17px; }
+.brand-link {
+  display: inline-block; font-family: var(--mono); font-size: 14px; text-decoration: none;
+  border: 1px solid var(--ink); padding: 10px 16px;
+}
+.brand-link:hover { background: var(--magenta); border-color: var(--magenta); color: white; }
+.brand-images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.brand-images img:first-child { grid-column: 1 / -1; }
+.brand-images img { width: 100%; border: 1px solid var(--rule); background: white; }
 
 /* the logo grid: shared cyan lines, like a specimen sheet */
 .logo-grid {
