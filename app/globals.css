@@ -175,9 +175,10 @@ img { max-width: 100%; display: block; }
 .sheet-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
 .sheet-no { font-family: var(--display); font-size: 40px; color: var(--magenta); line-height: 1; }
 .sheet-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.sheet.flip .sheet-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
 .sheet.flip .shot { order: 2; }
 @media (max-width: 860px) {
-  .sheet-body { grid-template-columns: 1fr; gap: 28px; }
+  .sheet-body, .sheet.flip .sheet-body { grid-template-columns: 1fr; gap: 28px; }
   .sheet.flip .shot { order: 0; }
 }
 
@@ -190,7 +191,10 @@ img { max-width: 100%; display: block; }
 }
 .crop::before { top: -12px; left: -12px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .crop::after { bottom: -12px; right: -12px; border-left: 1px solid var(--ink); border-top: 1px solid var(--ink); }
-.crop img { max-height: 560px; width: 100%; object-fit: cover; object-position: top; }
+/* Every screenshot sits in the same 16:10 frame, so the sheets line up.
+   Wide shots fill it (trimmed from the bottom); narrow app shots are centred. */
+.crop img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; }
+.crop.contain img { object-fit: contain; object-position: center; background: #ecece8; }
 .crop:hover { border-color: var(--magenta); }
 
 .specs h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.05; margin: 0 0 12px; }

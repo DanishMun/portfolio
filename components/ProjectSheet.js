@@ -15,7 +15,7 @@ export default function ProjectSheet({ project, index, total }) {
       <div className="sheet-body">
         <figure className="shot">
           <figcaption className="mono">{project.imageSize}</figcaption>
-          <a href={project.live} className="crop">
+          <a href={project.live} className={`crop ${project.fit === "contain" ? "contain" : ""}`}>
             <img src={project.image} alt={`Screenshot of ${project.title}`} loading="lazy" />
           </a>
         </figure>
