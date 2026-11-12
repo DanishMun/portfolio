@@ -41,14 +41,20 @@ export default function ProjectSheet({ project, index, total }) {
             <dt>Stack</dt>
             <dd className="mono">{project.stack.join(" · ")}</dd>
 
-            <dt>Tests</dt>
-            <dd className="mono">{project.tests} passing</dd>
+            {/* Not every project has tests (a Shopify theme, for example) */}
+            {project.tests && (
+              <>
+                <dt>Tests</dt>
+                <dd className="mono">{project.tests} passing</dd>
+              </>
+            )}
           </dl>
 
           <p className="links">
             <a href={project.live}>Open it live ↗</a>
-            <a href={project.code}>Read the code ↗</a>
+            {project.code && <a href={project.code}>Read the code ↗</a>}
           </p>
+          {project.note && <p className="mono note-small">{project.note}</p>}
         </div>
       </div>
     </article>

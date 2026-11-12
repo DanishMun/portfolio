@@ -9,7 +9,7 @@ export default function StructuredData() {
     name: person.name,
     url: siteUrl,
     email: `mailto:${person.email}`,
-    jobTitle: "Full Stack Developer and Designer",
+    jobTitle: "Full Stack Developer",
     address: { "@type": "PostalAddress", addressLocality: "Espoo", addressCountry: "FI" },
     alumniOf: { "@type": "CollegeOrUniversity", name: "University of Eastern Finland" },
     knowsLanguage: ["English", "Urdu", "Finnish"],

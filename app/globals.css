@@ -208,6 +208,7 @@ img { max-width: 100%; display: block; }
 .links a:first-child { background: var(--ink); color: var(--paper); }
 .links a:hover { background: var(--magenta); border-color: var(--magenta); color: white; }
 
+.note-small { color: var(--grey); font-size: 12px; margin: 12px 0 0; }
 .wip { border: 1px dashed var(--grey); padding: 20px 24px; max-width: 640px; }
 .wip .mono { color: var(--magenta); text-transform: uppercase; }
 .wip h3 { font-family: var(--display); font-weight: 400; font-size: 28px; margin: 6px 0; }

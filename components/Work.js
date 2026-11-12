@@ -8,8 +8,8 @@ export default function Work() {
         <span className="mono">02</span> Work
       </h2>
       <p className="section-lead">
-        Three small tools, each built for a real business problem. Every one is live,
-        tested, and small enough to read in an evening.
+        Real projects, each built for a real business problem. Every one is live,
+        and small enough to read in an evening.
       </p>
 
       {projects.map((project, i) => (
