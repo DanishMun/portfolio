@@ -11,8 +11,8 @@ export default function About() {
       <div className="about-grid">
         <div className="about-text">
           <p>
-            I'm Danish. I grew up in Pakistan and studied computer science there. Since 2015
-            I have designed logos for clients around the world, most of whom I never met in
+            I'm Danish. I have a bachelor's in computer science, and since 2015 I have
+            worked as a designer for clients around the world, most of whom I never met in
             person. In 2022 I moved to Finland for my master's degree, and I live in Espoo.
           </p>
           <p>
