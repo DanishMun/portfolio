@@ -9,8 +9,8 @@ export default function Services() {
         <span className="mono">05</span> What I can build
       </h2>
       <p className="section-lead">
-        The kinds of work I can do from day one, in a team or for a business in Espoo,
-        Helsinki or anywhere in Finland.
+        What I can do from day one in a development team, in Espoo, Helsinki or
+        anywhere in Finland.
       </p>
 
       <ol className="services">

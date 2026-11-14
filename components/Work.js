@@ -9,7 +9,7 @@ export default function Work() {
       </h2>
       <p className="section-lead">
         Real projects, each built for a real business problem. Every one is live,
-        and small enough to read in an evening.
+        tested and written in clean, readable code.
       </p>
 
       {projects.map((project, i) => (
